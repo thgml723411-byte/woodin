@@ -1,0 +1,523 @@
+/* 상단시작 */
+body{
+    background-color: rgb(211, 211, 211);
+}
+nav{
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%;
+    height: 90px;
+    background-color: lightgray;
+    color: black;
+    display: flex;
+    justify-content: center; 
+    /* align-items: start; */
+    transition: all 0.3s;
+    overflow: hidden;
+    z-index: 10;
+}
+.nav.on{
+    height: 490px;
+    /* background-color: aqua; */
+}
+/* 상단종료 */
+
+/* 로고시작 */
+.logoBox{
+    width: 20%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 로고종료  */
+
+/* gnb시작 */
+.gnb{
+    width: 70%;
+    height: 90px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.gnb > li{
+    width: calc(95%/3);
+    height: 90px;
+}
+.gnb > li > a {         
+    width: 100%;
+    height: 90px;
+    /* background-color: gold; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;            
+}
+/* gnb종료 */
+
+/* snb시작 */
+.snb{
+    /* margin-top: 20px; */
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: flex-start;
+    gap:10px;
+}
+/* snb종료 */
+
+/* 햄버거바시작 */
+.ham {
+    width: 25px;          
+    height: 25px;         
+    display: flex;
+    flex-wrap: wrap;   
+    gap: 5px;             
+    cursor: pointer;
+    transform: translate(-20px, 32px);
+}
+.ham span {
+    width: 10px;          
+    height: 10px;         
+    background-color: #333;
+    border-radius: 50%;   
+}
+/* 햄버거바종료 */
+
+/* 풀메뉴시작 */
+p{
+    font-size: 50px;
+}
+.fullmenugnb {
+    position: relative; /* 타이틀 절대 배치를 위한 기준 */
+    padding-top: 80px; /* 타이틀이 들어갈 상단 여백 확보 */
+}
+.fullmenugnb > p {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* 가운데 정렬 */
+    margin: 0;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.fullmenugnb > li > a {
+    text-align: center; /* 부모 너비 안에서 가운데 정렬 */
+    margin-bottom: 20px; /* 하위 메뉴와의 간격 */
+}
+
+.fullmenusnb {
+    list-style: none; /* 점 제거 */
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center; /* 하위 메뉴 글자들도 가운데 정렬 */
+}
+
+.fullmenusnb > li {
+    margin-bottom: 15px; /* 하위 메뉴 간의 세로 간격 */
+}
+
+.fullmenusnb > li > a {
+    display: block;
+    color: #ccc; /* 상위 메뉴와 구분되도록 살짝 밝은 회색 적용 */
+    font-size: 20px; /* 하위 메뉴 글자 크기 조정 */
+    text-align: center;
+    transition: color 0.2s;
+}
+
+/* 하위 메뉴 마우스 올렸을 때 효과 (선택사항) */
+.fullmenusnb > li > a:hover {
+    color: white; 
+}
+/* 풀메뉴종료 */
+
+/* 홈 시작 */
+
+/* 홈첫번째시작 */
+.mainOutBox1{
+ width: 95%;
+ margin-top: 50px;
+}
+.main1{
+    position: relative; /* 부모배치를 위한 기준점 */ 
+    left: 50px; top: 50px;     
+    flex-direction: column;
+    display: flex;           /* 정렬 */
+    justify-content: center; /* 정렬 */
+    align-items: center;     /* 정렬 */
+    color: #fff;           
+}
+.main1 img {
+    width: 100%;
+    height: 100%;
+    position: relative; /* 부모배치를 위한 기준점 */ 
+    top: 0; left: 0; 
+    border-radius: 10px;
+}
+.main1 p {
+    position: absolute; /* 자식배치를 위한 기준점 */ 
+    z-index: 10;      /* 이미지는 뒤로, 글씨는 앞으로 오게 함 */
+    font-size: 60px;
+    color: white;
+    overflow: hidden; /* 글자를부모박스안에가두다 */
+    font-weight: 100;
+}
+.main1 .main-txt1{
+    transform: translateY(-90px)
+}
+.main1 .main-txt2{
+    transform: translateY(30px);  /* 아래로 살짝 내림 */
+}
+/* 홈첫번째종료 */
+
+/* 홈두번째시작 */
+.mainOutBox2{
+    width: 95%;
+    height: 1000px;
+    /* background-color: white; */
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex; /* 자식이플렉스사용하면부모도플렉스가있어야함 */
+    gap: 40px;
+}
+.leftBox2{
+    flex: 1; /* 자기스스로의비율 */
+    text-align: center;
+    display: flex; 
+    justify-content: center;
+    align-items: center;     
+    flex-direction: column; 
+}
+.leftBox2 .small-txt{
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #111
+}
+.leftBox2 .big-txt{
+    font-size: 80px; 
+    font-weight: 300; /* 얇은 폰트 스타일 */
+    line-height: 1.2;
+    margin-bottom: 30px;
+    color: #111;
+}
+.leftBox2 .short-line{
+    width: 60px;
+    height: 1px;
+    background-color: #333;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.leftBox2 .gray-txt{
+    color: #666;
+    font-size: 30px;
+}
+.rightBox2{
+    flex: 1;
+    position: relative;
+}
+.rightBox2 img{
+    width: 100%;
+    height: 100%;
+    border-radius:10px;
+    object-fit: cover; /* 이미지가 박스에 꽉 차게 */
+}
+.blakbox{
+    width: 100%;
+    height: 100px;
+    padding-left: 40px;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: start;
+    align-items: center; 
+    border-radius:0 0 10px 10px;
+}
+.blakbox p{
+    color: white;
+    font-size: 30px;
+}
+/* 홈두번째종료 */
+
+/* 홈세번째시작 */
+.mainOutBox3{
+    width: 95%;
+    /* height: 1000px; */
+    /* background-color: aqua; */
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.rows{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    gap: 15px;
+    overflow: hidden;
+    margin: 30px auto;
+    /* background-color: aqua; */
+}
+.rows img{
+    object-fit: cover;
+    border-radius: 10px;
+    flex: 1;
+}
+.rows img:hover{
+    transform: scale(0.9);
+    /* opacity: 0.7; */
+    cursor: pointer;
+}
+/*윗줄글자*/
+.rowtxt{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.s-txt{
+    font-size: 20px;
+}
+.b-txt{
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.g-txt{
+    color: #666;
+    font-size: 20px;
+}
+/* 홈세번째종료 */
+
+/* 홈네번재시작 */
+.mainOutBox4{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 60px;
+    background-color: black;
+    display: flex;
+}
+/* 왼쪽 */
+.leftBox4 {
+    flex: 1; /* 왼쪽 공간 */
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 80px; /* 왼쪽 여백 */
+}
+/* 왼쪽글자 */
+.lefttxt4 {
+    width: 70%; /* 텍스트 박스 너비 제한 */
+    text-align: right; /* 글자는 왼쪽 정렬 */
+}
+.small-txt {
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 25px;
+}
+.big-txt {
+    font-size: 60px;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.short-line {
+    width: 60px;
+    height: 1px;
+    background-color: #fff;
+    margin-bottom: 30px;
+    margin-left: auto; 
+}
+.gray-txt {
+    font-size: 16px;
+    color: #999;
+}
+/* 오른쪽 */
+.rightBox4 {
+    flex: 2;
+}
+/* 오른쪽이미지 */
+.rightBox4 img {
+    width: 100%;
+    object-fit: cover;
+    border: 10px;
+}
+/* 홈네번재종료 */
+
+/* 홈다섯번째시작 */
+.mainOutBox5{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+.main5{
+    margin-bottom: 50px;
+    text-align: left;
+}
+.main5 .s-txt {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.main5 .b-txt {
+    text-align: left; /* 중앙 정렬되어 있던 것을 왼쪽으로 덮어쓰기 */
+    margin: 0;       /* 불필요한 마진 제거 */
+    display: block;   /* 한 줄을 다 차지하게 설정 */
+}
+.items{
+    display: flex;
+    gap: 20px; /* 이미지 사이의 간격 */
+    justify-content: space-between; /* 양 끝 정렬 */
+}
+.item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.item img {
+    width: 100%;
+    height: 580px;        
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.item img:hover{
+    transform: scale(0.9);
+    /* opacity: 0.7; */
+    cursor: pointer;
+}
+.item-txt {
+    font-size: 35px;
+    color: #777; 
+    text-align: left;
+}
+/* 홈다섯번째종료 */
+
+/* 홈여섯번째시작 */
+.mainOutBox6 {
+    width: 100%;
+    height: 1500px; 
+    margin-top: 100px;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.maini6 {
+    width: 90%; 
+    height: 85%;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../img/h/h14.jpeg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: relative; 
+}
+.mainMini6 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+    margin-top: 15%;
+}
+.top-txt {
+    margin-bottom: 16%; 
+}
+.top-txt div:first-child { 
+    font-size: 30px;
+}
+.top-txt div:last-child { 
+    font-size: 70px; 
+    font-weight: bold; 
+}
+.bottom-txt {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.bottom-txt > div { 
+    flex: 1; 
+    padding: 10px; 
+}
+.bottom-txt > div div:first-child { 
+    font-size: 40px; 
+    margin-bottom: 15px; 
+}
+.bottom-txt > div div:last-child { 
+    font-size: 25px; 
+    line-height: 1.7; 
+    opacity: 0.7; 
+}
+/* 홈여섯번째종료 */
+
+/* 홈일곱번째시작 */
+.mainOutBox7 {
+    width: 100%;
+    height: 100vh;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    overflow: hidden; 
+}
+.main7 {
+    display: flex;
+    align-items: center;
+    width: 100%; 
+}
+.videoBox {
+    flex: 1.5; 
+    height: 500px;
+    margin-left: 5%; 
+    position: relative; 
+    z-index: 10;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+.textBox {
+    flex: 1; 
+    height: 800px; 
+    background-color: #111;
+    border-radius: 10px;
+    color: #fff;
+    margin-left: -120px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    padding-left: 180px;
+    position: relative; 
+    z-index: 1;   
+}
+.media-txt { 
+    font-size: 14px; 
+    opacity: 0.6; 
+    margin-bottom: 20px; 
+    letter-spacing: 2px;
+}
+.title-txt { 
+    font-size: 42px; 
+    line-height: 1.2; 
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.bar { 
+    width: 60px; 
+    height: 1px; 
+    background: #fff; 
+    margin-bottom: 30px; 
+}
+.desc-txt { 
+    font-size: 16px; 
+    opacity: 0.8; 
+}
+/* 홈일곱번째종료 */
+/* 홈 종료 */

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우디카피사이트쇼룸</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/ss.css">
+</head>
+<body>
+
+<!-- 메뉴상단시작 -->   
+<header>
+  <nav class="nav">
+
+    <!-- 로고시작 -->
+    <div class="logoBox">
+        <img src="https://www.wood.co.kr/images/common/logo.png" alt="로고이미지"/>
+        <a href="index.html" onclick="onpage(0)"></a>
+    </div>
+    <!-- 로고종료 -->
+
+    <!-- gnb,snb시작 -->
+    <ul class="gnb">
+        <li>
+            <a href="./b.html" onclick="onpage(0)">브랜드</a>
+            <ul class="snb">
+                <li><a href="./b.html" onclick="onpage(0)">브랜드스토리</a></li>
+                <li><a href="./b.html" onclick="onpage(1)">연혁 및 인증</a></li>
+                <li><a href="./b.html" onclick="onpage(2)">Cl&BI</a></li>
+                <li><a href="./b.html" onclick="onpage(3)">오시는길</a></li>
+            </ul>
+        </li>
+        <li><a href="./s.html" onclick="onpage(4)">스토리</a>
+            <ul class="snb">
+                <li><a href="./s.html" onclick="onpage(4)">미디어</a></li>
+                <li><a href="./s.html" onclick="onpage(5)">홍보</a></li>
+                <li><a href="./s.html" onclick="onpage(6)">협찬</a></li>
+                <li><a href="./s.html" onclick="onpage(7)">이벤트</a></li>
+            </ul>
+        </li>
+        <li><a href="./g.html" onclick="onpage(8)">갤러리</a>
+            <ul class="snb">
+                <li><a href="./g.html" onclick="onpage(8)">컬렉션</a></li>
+                <li><a href="./g.html" onclick="onpage(9)">인테리어</a></li>
+                <li><a href="./g.html" onclick="onpage(10)">익스테리어</a></li>
+            </ul>
+        </li>
+        <li><a href="./ss.html" onclick="onpage(11)">쇼룸</a>
+            <ul class="snb">
+                <li><a href="./ss.html" onclick="onpage(11)">전시장</a></li>
+            </ul>
+        </li>
+    </ul>
+    <!-- gnb,snb종료 -->
+
+    <!-- 햄버거바시작 -->
+    <div class="ham">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!-- 햄버거바종료 -->
+
+  </nav>
+</header>
+<!-- 메뉴상단종료 -->
+
+<!-- 쇼룸 섹션 시작 -->
+<section class="showroom">
+  
+  <!-- 첫번째시작 -->
+  <!-- 1. 상단 타이틀 영역 -->
+  <h1 class="title">
+    SHOWROOM <span>쇼룸</span>
+  </h1>
+
+  <!-- 2. 메인 플렉스 레이아웃 영역 -->
+  <div class="content">
+    
+    <!-- 왼쪽 세로 이미지 박스 (.pic-long) -->
+    <div class="pic-long">
+      <!-- 왼쪽 식물/도어 인테리어 이미지 경로를 넣으세요 -->
+      <img src="./img/ss/ss1.jpg" alt="우딘하우스 쇼룸 인테리어">
+    </div>
+
+    <!-- 오른쪽 콘텐츠 박스 (.desc-side) -->
+    <div class="desc-side">
+      <!-- 오른쪽 상단 가로 이미지 (한옥 스타일 쇼룸) -->
+      <img src="./img/ss/ss2.jpg" alt="우딘하우스 한옥 전시장">
+      
+      <!-- 텍스트 스타일 영역 (.text) -->
+      <div class="text">
+        <p class="brand">WOODIN HAUS SHOWROOM</p>
+        <h2>손이 닿는 모든 곳, 눈길이 닿는<br>모든 곳에 건강함이 머뭅니다</h2>
+        <p class="sub">당신의 가장 건강한 공간을 위해 우딘의 제품을 직접 눈으로 보고 만져보세요.</p>
+      </div>
+    </div>
+
+  </div>
+  <!-- 첫번째종료 -->
+
+</section>
+<!-- 쇼룸 섹션 종료 -->
+
+<script>
+let gnb = document.querySelector(".gnb")
+let nav = document.querySelector(".nav")
+let ham = document.querySelector('.ham')
+let fullmenu = document.querySelector('.fullmenu')
+let closebtn = document.querySelector('.closebtn')
+// let ses = document.querySelectorAll('.wrap>section')
+
+//메뉴상단
+    gnb.addEventListener("mouseenter", function(){
+        nav.classList.add("on")
+    })
+    gnb.addEventListener("mouseleave", function(){
+        nav.classList.remove("on")
+    })
+
+//햄버거바
+    ham.addEventListener('click',function(){
+        fullmenu.classList.add('on')
+    })
+    closebtn.addEventListener('click',function(){
+        fullmenu.classList.remove('on')
+    })
+</script>
+</body>
+</html>
+</body>
+</html>

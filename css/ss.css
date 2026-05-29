@@ -1,0 +1,71 @@
+
+body{
+ background-color: lightgrey;
+}
+.showroom {
+  width: 95%;
+  margin: 100px auto;
+  padding: 8%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* 첫번째시작 */
+.showroom .title {
+  text-align: center;
+  font-size: 60px; /* 적절한 크기로 조정 */
+  margin-bottom: 50px
+}
+.showroom .title span{
+  font-size: 20px; 
+  margin-left: 10px; /* 영어와 한글 사이의 좌우 간격 추가 */
+  color: #444;
+}
+/* 메인 레이아웃 */
+.showroom .content {
+  display: flex;
+  gap: 30px; /* 좌우 간격 */
+  align-items: stretch; /* 왼쪽 이미지가 오른쪽 높이를 따라가게 함 */
+}
+/* 왼쪽 세로 이미지 박스 */
+.showroom .pic-long {
+  flex: 1;
+}
+.showroom .pic-long img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지가 찌그러지지 않게 꽉 채움 */
+  border-radius: 10px;
+}
+/* 오른쪽 콘텐츠 박스 (이미지 + 텍스트) */
+.showroom .desc-side {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  text-align: right; /* 이미지처럼 오른쪽 정렬 */
+}
+.showroom .desc-side img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 60px;
+}
+/* 텍스트 스타일 */
+.showroom .text .brand {
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+.showroom .text h2 {
+  font-size: 50px;
+  font-weight: 300; /* 얇은 폰트 느낌 */
+  line-height: 1.4;
+  margin-bottom: 60px;
+}
+.showroom .text .sub {
+  font-size: 18px;
+  color: #888
+}
+/* 첫번째종료 */
+
+/* 두번째시작 */
+
+/* 두번째종료 */
