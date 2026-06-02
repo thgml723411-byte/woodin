@@ -32,6 +32,13 @@ nav{
     justify-content: center;
     align-items: center;
 }
+
+.logoBox img {
+    height: 50px; /* 90px 높이 안에서 로고가 예쁘게 보일 세로 크기 */
+    width: auto; /* 세로 높이에 맞춰서 가로 크기가 원본 비율대로 자동 조절 */
+    object-fit: contain;
+    display: block
+}
 /* 로고종료  */
 
 /* gnb시작 */
@@ -43,7 +50,7 @@ nav{
     align-items: center;
 }
 .gnb > li{
-    width: calc(95%/3);
+    width: calc(95%/4);
     height: 90px;
 }
 .gnb > li > a {         
@@ -92,51 +99,68 @@ nav{
 p{
     font-size: 50px;
 }
-.fullmenugnb {
-    position: relative; /* 타이틀 절대 배치를 위한 기준 */
-    padding-top: 80px; /* 타이틀이 들어갈 상단 여백 확보 */
-}
-.fullmenugnb > p {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%); /* 가운데 정렬 */
-    margin: 0;
-    font-size: 50px;
-    font-weight: bold;
-}
-
-.fullmenugnb > li > a {
-    text-align: center; /* 부모 너비 안에서 가운데 정렬 */
-    margin-bottom: 20px; /* 하위 메뉴와의 간격 */
-}
-
-.fullmenusnb {
-    list-style: none; /* 점 제거 */
-    padding: 0;
-    margin: 0;
+.fullmenu{
     width: 100%;
-    text-align: center; /* 하위 메뉴 글자들도 가운데 정렬 */
+    height: 100vh;
+    background-color:black;
+    color: white;
+    position: fixed;
+    left: 0; top: -120%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.3s;
+    overflow: hidden;
 }
-
-.fullmenusnb > li {
-    margin-bottom: 15px; /* 하위 메뉴 간의 세로 간격 */
+.fullmenu.on{
+    top: 0;
 }
-
-.fullmenusnb > li > a {
-    display: block;
-    color: #ccc; /* 상위 메뉴와 구분되도록 살짝 밝은 회색 적용 */
-    font-size: 20px; /* 하위 메뉴 글자 크기 조정 */
+.closebtn{
+    position: absolute; 
+    right: 30px; top: 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 1px;
+    /* background-color: aqua; */
+    font-size: 25px; 
+    font-weight: bold;
+    color: white;
+}
+.fullmenugnb{
+    width: 80%;
+    height: 80%;
+    /* background-color: blue; */
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    /* gap: 100px; */
+    margin-bottom: 50px;
+}
+.fullmenugnb > li{
+    width: calc(90%/4);
+    height: 100%;
+    /* background-color: pink; */
+    margin-top: 10px; 
+    /* 서브메뉴 가로 및 세로 정렬을 위한 속성 추가 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.fullmenugnb > li > a{
+    display: block; 
+    width: 100%;
+    height: 50px;
+    /* background-color: blueviolet; */
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
     text-align: center;
-    transition: color 0.2s;
+    line-height: 50px;
 }
-
-/* 하위 메뉴 마우스 올렸을 때 효과 (선택사항) */
-.fullmenusnb > li > a:hover {
-    color: white; 
-}
-/* 풀메뉴종료 */
-
+/* ------------------------풀메뉴종료 ------------------*/
 /* 홈 시작 */
 
 /* 홈첫번째시작 */

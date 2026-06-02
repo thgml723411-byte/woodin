@@ -15,8 +15,8 @@
 
         <!-- 로고시작 -->
         <div class="logoBox">
-            <img src="https://www.wood.co.kr/images/common/logo.png" alt="로고이미지"/>
-            <a href="./index.html" onclick="onpage(0)"></a>
+          <img src="img/h/logo.png" alt="로고이미지"/>
+          <a href="index.html" onclick="onpage(0)"></a>
         </div>
         <!-- 로고종료 -->
 
@@ -253,40 +253,6 @@
 </div>
 <!-- 홈 색션 일곱번째 종료 -->
 
-<script>
-let gnb = document.querySelector(".gnb")
-let nav = document.querySelector(".nav")
-let ham = document.querySelector('.ham')
-let fullmenu = document.querySelector('.fullmenu')
-let closebtn = document.querySelector('.closebtn')
-// let ses = document.querySelectorAll('.wrap>section')
-
-//메뉴상단
-    gnb.addEventListener("mouseenter", function(){
-        nav.classList.add("on")
-    })
-    gnb.addEventListener("mouseleave", function(){
-        nav.classList.remove("on")
-    })
-
-//햄버거바
-    ham.addEventListener('click',function(){
-        fullmenu.classList.add('on')
-    })
-    closebtn.addEventListener('click',function(){
-        fullmenu.classList.remove('on')
-    })
-
-//섹션
-//     function showpage(num){
-//         ses.forEach(function(item){
-//            item.classList.remove('on')
-//         })
-//         ses[num].classList.add('on')
-//         ham.classList.remove('on')
-//         fullmenu.classList.remove('on')
-// }
-</script>
 <script src="index.js"></script>
 </body>
 </html>
